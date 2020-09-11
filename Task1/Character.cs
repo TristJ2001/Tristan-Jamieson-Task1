@@ -16,7 +16,7 @@ namespace Task1
         protected int HP;
         protected int MaxHP;
         protected int Damage;
-        TileType[] vision = new TileType[4];
+        protected TileType[] vision = new TileType[4];
 
         public enum MovementEnum
         {
@@ -32,6 +32,9 @@ namespace Task1
         // Q 2.3
         public Character(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, TileType[] vision, MovementEnum move) : base(X, Y, TileT)
         {
+            this.X = X;
+            this.Y = Y;
+            this.TileT = TileT;
             this.HP = HP;
             this.MaxHP = MaxHP;
             this.Damage = Damage;
@@ -69,11 +72,7 @@ namespace Task1
 
         public abstract MovementEnum ReturnMove(MovementEnum move = 0);
 
-        public abstract override ToString()
-        {
-
-        }
-      
-        
+        public abstract override string ToString();
+    
     }
 }

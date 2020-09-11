@@ -28,23 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDisplay = new System.Windows.Forms.Label();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblDisplay
             // 
-            this.label1.Location = new System.Drawing.Point(267, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 291);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblDisplay.Location = new System.Drawing.Point(267, 82);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(231, 291);
+            this.lblDisplay.TabIndex = 0;
+            this.lblDisplay.Text = "label1";
+            // 
+            // btnUp
+            // 
+            this.btnUp.Location = new System.Drawing.Point(646, 198);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(75, 23);
+            this.btnUp.TabIndex = 1;
+            this.btnUp.Text = "▲";
+            this.btnUp.UseVisualStyleBackColor = true;
+            // 
+            // btnDown
+            // 
+            this.btnDown.Location = new System.Drawing.Point(646, 256);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(75, 23);
+            this.btnDown.TabIndex = 2;
+            this.btnDown.Text = "▼";
+            this.btnDown.UseVisualStyleBackColor = true;
+            // 
+            // btnRight
+            // 
+            this.btnRight.Location = new System.Drawing.Point(700, 227);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(75, 23);
+            this.btnRight.TabIndex = 3;
+            this.btnRight.Text = "►";
+            this.btnRight.UseVisualStyleBackColor = true;
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.Location = new System.Drawing.Point(592, 227);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(75, 23);
+            this.btnLeft.TabIndex = 4;
+            this.btnLeft.Text = "◄";
+            this.btnLeft.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLeft);
+            this.Controls.Add(this.btnRight);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
+            this.Controls.Add(this.lblDisplay);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -53,7 +97,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnRight;
+        private System.Windows.Forms.Button btnLeft;
     }
 }
 
