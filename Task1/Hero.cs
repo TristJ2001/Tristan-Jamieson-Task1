@@ -11,7 +11,7 @@ namespace Task1
     {
         string valid;
         MovementEnum HMove;
-        public Hero(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, TileType[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, 2, vision, move)
+        public Hero(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, 2, vision, move)
         {
             this.X = X;
             this.Y = Y;

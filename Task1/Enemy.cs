@@ -11,7 +11,7 @@ namespace Task1
     {
         protected Random rand = new Random();
 
-        public Enemy(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, TileType[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, Damage, vision, move)
+        public Enemy(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, Damage, vision, move)
         {
             this.X = X;
             this.Y = Y;

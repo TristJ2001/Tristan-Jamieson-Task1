@@ -1,0 +1,5 @@
+C:\GitHub\Task1\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+C:\GitHub\Task1\Task1\obj\Debug\Task1.Form1.resources
+C:\GitHub\Task1\Task1\obj\Debug\Task1.Properties.Resources.resources
+C:\GitHub\Task1\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+C:\GitHub\Task1\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
