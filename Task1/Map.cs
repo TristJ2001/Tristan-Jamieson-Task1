@@ -14,60 +14,48 @@ namespace Task1
     {
         Random rand = new Random();
 
-        Tile.TileType[,] TileArray = new Tile.TileType[0, 0];
+        Tile.TileType[,] gameMap = new Tile.TileType[0, 0];
 
         Hero player;
 
-        Enemy[] enemies = new Enemy[0];
+        Enemy[] enemies = new Enemy[5];
 
         int width;
         int height;
-
-        public void BoarderMapAndPopulate()
-        {
-            for (int i = 0; i < TileArray.GetLength(0); i++)
-            {
-                for (int j = 0; j < TileArray.GetLength(1); j++)
-                {
-                    TileArray[i, j] = Tile.TileType.EmptyTile;
-                }
-            }
-
-            // Border Map with Obstacles
-            for (int x = 0; x < TileArray.GetLength(0); x++)
-            {
-                // Top Row
-                TileArray[x, 0] = Tile.TileType.Obstacle;
-                // Bottom Row
-                TileArray[x, 10] = Tile.TileType.Obstacle;
-                // Left Row
-                TileArray[0, x] = Tile.TileType.Obstacle;
-                // Right Row
-                TileArray[10, x] = Tile.TileType.Obstacle;
-            }
-
-        }
-
-        public void PositionHero()
-        {
-            int random1 = rand.Next(1, TileArray.GetLength(0));
-            int random2 = rand.Next(1, TileArray.GetLength(1));
-
-
-            TileArray[random1, random2] = Tile.TileType.Hero;
-        }
 
         public Map(int minHeight, int maxHeight, int minwWidth, int maxwidth, int numberEnemies)
         {
             int height = rand.Next(minHeight, maxHeight);
             int width = rand.Next(minwWidth, maxwidth);
 
-            Tile[,] gameMap = new Tile[width, height];
+            Tile.TileType[,] gameMap = new Tile.TileType[width, height];
 
             this.height = height;
             this.width = width;
 
             Enemy[] enemyArray = new Enemy[numberEnemies];
+
+            // fill game map with empty tiles
+            for (int i = 0; i < gameMap.GetLength(0); i++)
+            {
+                for (int j = 0; j < gameMap.GetLength(1); j++)
+                {
+                    gameMap[i, j] = Tile.TileType.EmptyTile;
+                }
+            }
+
+            // border map with obstacles
+            for (int x = 0; x < gameMap.GetLength(0); x++)
+            {
+                // Top Row
+                gameMap[x, 0] = Tile.TileType.Obstacle;
+                // Bottom Row
+                gameMap[x, 10] = Tile.TileType.Obstacle;
+                // Left Row
+                gameMap[0, x] = Tile.TileType.Obstacle;
+                // Right Row
+                gameMap[10, x] = Tile.TileType.Obstacle;
+            }
 
             Create(Tile.TileType.Hero);
 
@@ -92,31 +80,33 @@ namespace Task1
             if (type == Tile.TileType.Enemy)
             {
                 // place enemy
-                int enemyX = rand.Next(1, TileArray.GetLength(0));
-                int enemyY = rand.Next(1, TileArray.GetLength(1));
+                int enemyX = rand.Next(1, gameMap.GetLength(0));
+                int enemyY = rand.Next(1, gameMap.GetLength(1));
 
-                while (TileArray[enemyX, enemyY] == Tile.TileType.Enemy)
+                while (gameMap[enemyX, enemyY] == Tile.TileType.Enemy || gameMap[enemyX, enemyY] == Tile.TileType.Obstacle)
                 {
-                    enemyX = rand.Next(1, TileArray.GetLength(0));
-                    enemyY = rand.Next(1, TileArray.GetLength(1));
+                    enemyX = rand.Next(1, gameMap.GetLength(0));
+                    enemyY = rand.Next(1, gameMap.GetLength(1));
                 }
-                TileArray[enemyX, enemyY] = Tile.TileType.Enemy;
+                gameMap[enemyX, enemyY] = Tile.TileType.Enemy;
+
+                Tile Enemy = new Tile(enemyX, enemyY, Tile.TileType.Enemy);
             }
             else if (type == Tile.TileType.Hero)
             {
                 // place hero
-                int heroX = rand.Next(1, TileArray.GetLength(0));
-                int heroY = rand.Next(1, TileArray.GetLength(1));
+                int heroX = rand.Next(1, gameMap.GetLength(0));
+                int heroY = rand.Next(1, gameMap.GetLength(1));
 
-                while (TileArray[heroX, heroY] == Tile.TileType.Enemy)
+                while (gameMap[heroX, heroY] == Tile.TileType.Enemy || gameMap[heroX, heroY] == Tile.TileType.Obstacle)
                 {
-                    heroX = rand.Next(1, TileArray.GetLength(0));
-                    heroY = rand.Next(1, TileArray.GetLength(1));
+                    heroX = rand.Next(1, gameMap.GetLength(0));
+                    heroY = rand.Next(1, gameMap.GetLength(1));
                 }
-                TileArray[heroX, heroY] = Tile.TileType.Hero;
+                gameMap[heroX, heroY] = Tile.TileType.Hero;
             }
 
-            //return 
+            return ;
         }
     }
 }

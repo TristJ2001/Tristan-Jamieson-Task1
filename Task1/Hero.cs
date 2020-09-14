@@ -23,23 +23,23 @@ namespace Task1
             this.move = move;
         }
 
-        public override MovementEnum ReturnMove(MovementEnum move = 0)
+        public override MovementEnum ReturnMove(Character.MovementEnum move)
         {
-            int random1 = rand.Next(0, 5);
             // check vision!
-            if (random1 == 0)
+            if (move == Character.MovementEnum.North)
             {
+                if()
                 HMove = MovementEnum.North;
             }
-            else if (random1 == 1)
+            else if (move == Character.MovementEnum.South)
             {
                 HMove = MovementEnum.South;
             }
-            else if (random1 == 2)
+            else if (move == Character.MovementEnum.East)
             {
                 HMove = MovementEnum.East;
             }
-            else if (random1 == 3)
+            else if (move == Character.MovementEnum.West)
             {
                 HMove = MovementEnum.West;
             }
