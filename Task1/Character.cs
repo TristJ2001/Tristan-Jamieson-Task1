@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,37 +10,57 @@ namespace Task1
     // Q 2.2
     public abstract class Character : Tile
     {
-       // int X;
-       // int Y;
-       // TileType TyleT;
-
-        protected int HP;
-        protected int MaxHP;
-        protected int Damage;
-        protected Tile[] vision = new Tile[4];
-
-        public enum MovementEnum
+        protected int hp;
+        public int HP
         {
-            North,
-            South,
-            East,
-            West,
-            NoMovement
+            get
+            {
+                return hp;
+            }
+        }
+
+        protected char symbol;
+        public char Symbol
+        {
+            get
+            {
+                return symbol;
+            }
+        }
+
+        protected int maxHP;
+        public int MaxHP
+        {
+            get
+            {
+                return maxHP;
+            }
+        }
+
+        protected int damage;
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+        }
+
+        protected Tile[] vision = new Tile[4];
+        public Tile[] Vision
+        {
+            get
+            {
+                return vision;
+            }
         }
 
         protected MovementEnum move;
 
         // Q 2.3
-        public Character(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT)
+        public Character(int X, int Y, char Symbol) : base(X, Y)
         {
-            this.X = X;
-            this.Y = Y;
-            this.TileT = TileT;
-            this.HP = HP;
-            this.MaxHP = MaxHP;
-            this.Damage = Damage;
-            this.vision = vision;
-            this.move = move;
+            this.symbol = Symbol;
         }
 
         public virtual void Attack(char Target)
@@ -49,8 +70,14 @@ namespace Task1
 
         public bool isDead()
         {
-            //placekeeper
-            return false;
+            if(HP <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public virtual bool CheckRange(char Target)
@@ -61,18 +88,41 @@ namespace Task1
 
         private int DistanceTo(char target)
         {
-            //placekeeper
+            // placekeeper
             return 0;
         }
 
         public void Move(MovementEnum move)
         {
-
+            if(move == MovementEnum.North)
+            {
+                x = x - 1;
+            }
+            else if(move == MovementEnum.South)
+            {
+                x = x + 1;
+            }
+            else if(move == MovementEnum.East)
+            {
+                y = y + 1;
+            }
+            else if(move == MovementEnum.West)
+            {
+                y = y - 1;
+            }
         }
 
         public abstract MovementEnum ReturnMove(MovementEnum move = 0);
 
         public abstract override string ToString();
     
+    }
+    public enum MovementEnum
+    {
+        North,
+        South,
+        East,
+        West,
+        NoMovement
     }
 }

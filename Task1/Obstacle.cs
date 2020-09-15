@@ -9,9 +9,9 @@ namespace Task1
     // Q 2.1
      class Obstacle : Tile
     {
-        public Obstacle(int X, int Y, TileType TileT) : base(X, Y, TileT)
+        public Obstacle(int X, int Y) : base(X, Y)
         {
-            
+            tileT = TileType.Obstacle;
         }
     }
 }

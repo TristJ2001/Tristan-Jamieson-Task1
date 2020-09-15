@@ -3,3 +3,13 @@ C:\GitHub\Task1\Task1\obj\Debug\Task1.Form1.resources
 C:\GitHub\Task1\Task1\obj\Debug\Task1.Properties.Resources.resources
 C:\GitHub\Task1\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
 C:\GitHub\Task1\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.Form1.resources
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.Properties.Resources.resources
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\GitHub\Tristan-Jamieson-Task1\Task1\bin\Debug\Task1.exe.config
+C:\GitHub\Tristan-Jamieson-Task1\Task1\bin\Debug\Task1.exe
+C:\GitHub\Tristan-Jamieson-Task1\Task1\bin\Debug\Task1.pdb
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.exe
+C:\GitHub\Tristan-Jamieson-Task1\Task1\obj\Debug\Task1.pdb

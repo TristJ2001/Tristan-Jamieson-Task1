@@ -3,43 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Input;
 
 namespace Task1
 {
-    class GameEngine : Form1
+    // Q 3.3
+    class GameEngine
     {
-        private Map map;
-        
-        public Map GetMapMapVariable
+        private Map mapVariable;
+        public Map MapVariable
         {
             get
             {
-                return map;
+                return mapVariable;
             }
         }
 
-        public GameEngine(bool upIsClicked, bool downIsClicked, bool leftIsClicked, bool rightIsClicked) : base (upIsClicked, downIsClicked, leftIsClicked, rightIsClicked)
+        public GameEngine()
         {
-            map = new Map(5, 15, 5, 15, 5);
+           mapVariable = new Map(5, 15, 5, 15, 5);
         }
 
-        public bool MovePlayer(Character.MovementEnum direction)
+        public bool MovePlayer(MovementEnum direction)
         {
-            if(direction == Character.MovementEnum.North)
+            if (direction == MovementEnum.North)
             {
                 return true;
             }
-            else if(direction == Character.MovementEnum.South)
+            else if (direction == MovementEnum.South)
             {
                 return true;
             }
-            else if (direction == Character.MovementEnum.West)
+            else if (direction == MovementEnum.West)
             {
                 return true;
             }
-            else if (direction == Character.MovementEnum.East)
+            else if (direction == MovementEnum.East)
             {
                 return true;
             }
@@ -47,7 +45,6 @@ namespace Task1
             {
                 return false;
             }
-            
         }
     }
 }

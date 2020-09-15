@@ -33,6 +33,7 @@
             this.btnDown = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
+            this.lblPlayerStats = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDisplay
@@ -41,7 +42,7 @@
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(231, 291);
             this.lblDisplay.TabIndex = 0;
-            this.lblDisplay.Text = "label1";
+            this.lblDisplay.Text = "*Display Map*";
             // 
             // btnUp
             // 
@@ -83,11 +84,21 @@
             this.btnLeft.UseVisualStyleBackColor = true;
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
+            // lblPlayerStats
+            // 
+            this.lblPlayerStats.AutoSize = true;
+            this.lblPlayerStats.Location = new System.Drawing.Point(13, 13);
+            this.lblPlayerStats.Name = "lblPlayerStats";
+            this.lblPlayerStats.Size = new System.Drawing.Size(88, 17);
+            this.lblPlayerStats.TabIndex = 5;
+            this.lblPlayerStats.Text = "Player Stats:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPlayerStats);
             this.Controls.Add(this.btnLeft);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnDown);
@@ -96,6 +107,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,6 +118,7 @@
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnLeft;
+        private System.Windows.Forms.Label lblPlayerStats;
     }
 }
 

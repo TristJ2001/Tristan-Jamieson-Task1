@@ -11,35 +11,30 @@ namespace Task1
     {
         string valid;
         MovementEnum HMove;
-        public Hero(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, 2, vision, move)
+        public Hero(int X, int Y, int HP) : base(X, Y, 'H')
         {
-            this.X = X;
-            this.Y = Y;
-            this.TileT = TileT;
-            this.HP = HP;
-            this.MaxHP = MaxHP;
-            this.Damage = Damage;
-            this.vision = vision;
-            this.move = move;
+            tileT = TileType.Hero;
+            this.hp = HP;
+            this.maxHP = HP;
+            damage = 2;
         }
 
-        public override MovementEnum ReturnMove(Character.MovementEnum move)
+        public override MovementEnum ReturnMove(MovementEnum move)
         {
             // check vision!
-            if (move == Character.MovementEnum.North)
+            if (move == MovementEnum.North)
             {
-                if()
                 HMove = MovementEnum.North;
             }
-            else if (move == Character.MovementEnum.South)
+            else if (move == MovementEnum.South)
             {
                 HMove = MovementEnum.South;
             }
-            else if (move == Character.MovementEnum.East)
+            else if (move == MovementEnum.East)
             {
                 HMove = MovementEnum.East;
             }
-            else if (move == Character.MovementEnum.West)
+            else if (move == MovementEnum.West)
             {
                 HMove = MovementEnum.West;
             }
@@ -53,7 +48,7 @@ namespace Task1
 
         public override string ToString()
         {
-            return $"Player Stats:\n HP: {HP}/{MaxHP}\n Damage: {Damage}\n [{X}, {Y})";
+            return $"Player Stats:\n HP: {HP}/{MaxHP}\n Damage: {Damage}\n [{X}, {Y}]";
         }
     }
 }

@@ -11,16 +11,10 @@ namespace Task1
     {
         protected Random rand = new Random();
 
-        public Enemy(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT, HP, MaxHP, Damage, vision, move)
+        public Enemy(int X, int Y, int HP, int Damage, char Symbol) : base(X, Y, 'E')
         {
-            this.X = X;
-            this.Y = Y;
-            this.TileT = TileT;
-            this.HP = HP;
-            this.MaxHP = MaxHP;
-            this.Damage = Damage;
-            this.vision = vision;
-            this.move = move;
+            this.hp = HP;
+            this.damage = Damage;
         }
 
         public override string ToString()

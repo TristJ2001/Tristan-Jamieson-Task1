@@ -12,17 +12,9 @@ namespace Task1
         MovementEnum GMove;
         //check vision for valid movement
         string valid;
-        public Goblin(int X, int Y, TileType TileT, int HP, int MaxHP, int Damage, Tile[] vision, MovementEnum move) : base(X, Y, TileT, HP, 10, 1, vision, move)
+        public Goblin(int X, int Y) : base(X, Y, 10, 1, 'G')
         {
-            this.X = X;
-            this.Y = Y;
-            this.TileT = TileT;
-            this.HP = HP;
-            this.MaxHP = MaxHP;
-            this.Damage = Damage;
-            this.vision = vision;
-            this.move = move;
-
+            
         }
 
         public override MovementEnum ReturnMove(MovementEnum move = 0)

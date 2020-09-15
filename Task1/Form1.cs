@@ -19,17 +19,16 @@ namespace Task1
         public bool leftIsClicked = false;
         public Form1()
         {
-            Form1 newForm = new Form1();
-           /* int minHeight;
-            lblDisplay.Visible = false;
-            btnUp.Visible = false;
-            btnDown.Visible = false;
-            btnLeft.Visible = false;
-            btnRight.Visible = false;
-            */
             InitializeComponent();
+            GameEngine map1 = new GameEngine();
+            
+            lblDisplay.Text = map1.MapVariable.ToString();
         }
-
+        
+        public void Map()
+        {
+            
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
          
@@ -38,8 +37,6 @@ namespace Task1
         private void btnUp_Click(object sender, EventArgs e)
         {
             upIsClicked = true;
-
-            GameEngine.MovePlayer(Character.MovementEnum.North);
         }
 
         private void btnDown_Click(object sender, EventArgs e)
